@@ -19,6 +19,7 @@ export class AppService {
 
   handleError(error: Response | any) {
     console.log('error', error);
+    return error;
   }
 
   httpGet(url: string): Observable<any> {
