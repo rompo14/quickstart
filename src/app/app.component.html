@@ -5,7 +5,10 @@
       <table *ngIf="pricelist">
         <tbody>
           <tr *ngFor="let item of pricelist">
-            <td><a>{{ item.name }}</a></td>
+            <td>
+              <a href="#" (mouseenter)="popup.showPopup(item.id)" (mouseleave)="popup.hidePopup(item.id)">{{ item.name }}</a>
+              <app-popup [item]="item"></app-popup>
+            </td>
             <td> от {{ item.price.period[0].cost }} {{ item.price.currency }}</td>
           </tr>
         </tbody>

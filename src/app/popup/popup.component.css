@@ -1,0 +1,26 @@
+.popup-wrapper {
+	position: relative;
+}
+
+.popup {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	padding: .75rem;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	background-color: #fff;
+	transition: opacity .3s ease-in-out .5s;
+}
+
+.popup.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.top {
+	top: 0;
+	transform: translateY(-100%) translateY(-2rem);
+}

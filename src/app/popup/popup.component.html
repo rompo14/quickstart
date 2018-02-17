@@ -1,0 +1,3 @@
+<div *ngIf="item.description_ru" class="popup-wrapper">
+	<div class="popup" id="{{item.id}}" [innerHTML]="item.description_ru | safeHtml"></div>
+</div>
